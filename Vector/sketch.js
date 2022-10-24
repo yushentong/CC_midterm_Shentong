@@ -56,7 +56,7 @@ function draw() {
   }
 
   if((position.y>height)||(position.y<0)){
-    velocity.y = velocity.y * -1;
+    velocity.y = velocity.y * -2;
   }
 
   stroke(0);
