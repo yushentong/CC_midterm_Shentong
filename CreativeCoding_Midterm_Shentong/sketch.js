@@ -8,12 +8,12 @@ let popcorn01;
 
 function setup() {
   createCanvas(900, 900);
-  background(255);
-  popcorn01 = new Popcorn();
+  popcorn01 = new Popcorn(450, 450);
 }
 
 function draw() {
   //background
+  background(255);
   for (let i = 0; i < 900; i += 10){
     for (let j =0 ; j < 900; j += 10){
       if ((j%20)==0){
@@ -29,4 +29,7 @@ function draw() {
   }// end of background
 
   popcorn01.display();
+  popcorn01.update();
+  popcorn01.checkEdges();
+
 }

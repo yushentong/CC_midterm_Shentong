@@ -7,11 +7,47 @@ core = (193, 135, 71);
 
 class Popcorn{
 
-	constructor(){
-		this.position = createVector(450, 450);
+	constructor(x, y){
+		this.position = createVector(x, y);
+		this.velocity = createVector(0,2);
+		this.velocity.mult(2);
 	}
 
+	update(){
+		let mouse = createVector(mouseX, mouseY);
+		this.acceleration = p5.Vector.sub(mouse, this.position);
+		this.acceleration.setMag(0.1);
+
+		this.velocity.add(this.acceleration);
+		this.position.add(this.velocity);
+
+		console.log(popcorn01.x);
+		console.log(popcorn01.y);
+	}
+
+	checkEdges(){
+
+	  if (this.position.x > width) {
+	     this.position.x = width;
+	     this.velocity.x *= -1;
+	  }
+	  else if (this.position.x < 0) {
+	     this.position.x = 0;
+	     this.velocity.x *= -1;
+	  }
+	    
+	  if (this.position.y > height){
+		  this.position.y = height;
+		  this.velocity.y *= -1;
+	  }
+	  else if(this.position.y <0){
+		  this.position.y = 0;
+	      this.velocity.y *= -1;
+	  }
+  }
+
 	display(){
+		//popcorn style 1
 
 		noStroke();
 
