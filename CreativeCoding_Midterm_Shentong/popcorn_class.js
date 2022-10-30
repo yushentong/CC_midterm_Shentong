@@ -1,6 +1,6 @@
 /*
-body PopCorn = (254, 248, 222);
-outline PopCorn = (196, 160, 134);
+body Popcorn = (254, 248, 222);
+outline Popcorn = (196, 160, 134);
 core = (193, 135, 71);
 
 */
@@ -19,7 +19,7 @@ class Popcorn{
 			if ((mouseX - this.position.x)<50 || (mouseY - this.position.y)<50){
 				let mouse = createVector(mouseX, mouseY);
 				this.acceleration = p5.Vector.sub(mouse, this.position).div(-1);
-				this.acceleration.setMag(2);
+				this.acceleration.setMag(1);
 			} else {
 				this.acceleration = createVector(0, 0);
 			}
@@ -63,7 +63,7 @@ class Popcorn{
 	  }
 	}
 
-	overlaps(other){
+	overlaps(other){//not in use because it looks weird
 		let distance = dist(this.position.x, this.position.y, other.position.x, other.position.y);
 
 		if (distance < 100){
