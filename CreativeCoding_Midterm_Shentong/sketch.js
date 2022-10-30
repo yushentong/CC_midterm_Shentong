@@ -11,6 +11,8 @@ function setup() {
   createCanvas(900, 900);
   popcorn01 = new Popcorn();
   popcorn02 = new Popcorn();
+  popcorn03 = new Popcorn();
+  popcorn04 = new Popcorn();
 }
 
 function draw() {
@@ -30,18 +32,27 @@ function draw() {
     }
   }// end of background
 
-  let gravity = createVector(0, 1);
+  //let gravity = createVector(0, 1);
 
   popcorn01.display(1);
   popcorn01.update();
-  popcorn01.applyForce(gravity);
   popcorn01.checkEdges();
+
+  popcorn01.overlaps(popcorn02);
+  popcorn01.overlaps(popcorn03);
 
   popcorn02.display(2);
   popcorn02.update();
-  popcorn02.applyForce(gravity);
   popcorn02.checkEdges();
 
-  popcorn01.overlaps(popcorn02);
+  popcorn02.overlaps(popcorn03);
+
+  popcorn03.display(3);
+  popcorn03.update();
+  popcorn03.checkEdges();
+
+  popcorn04.display(4);
+  popcorn04.update();
+  popcorn04.checkEdges();
 
 }
