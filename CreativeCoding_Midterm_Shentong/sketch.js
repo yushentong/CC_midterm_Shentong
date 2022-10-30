@@ -4,11 +4,10 @@ blue = (13, 50, 132);
 yellow = (253, 240, 80);
 */
 
-let popcorn01;
-let popcorn02;
-
 function setup() {
   createCanvas(900, 900);
+  rectMode(CENTER);
+
   popcorn01 = new Popcorn();
   popcorn02 = new Popcorn();
   popcorn03 = new Popcorn();
@@ -33,10 +32,12 @@ function setup() {
   popcorn22 = new Popcorn();
   popcorn23 = new Popcorn();
   popcorn24 = new Popcorn();
+
+  eye01 = new Eyes(450, 450);
 }
 
 function draw() {
-  //background
+  //background red dots
   background(255);
   for (let i = 0; i < 900; i += 10){
     for (let j =0 ; j < 900; j += 10){
@@ -51,6 +52,8 @@ function draw() {
       }
     }
   }// end of background
+
+  eye01.background((color(30,255,20)),(color(0,0,255)));
 
   //let gravity = createVector(0, 1);
 
