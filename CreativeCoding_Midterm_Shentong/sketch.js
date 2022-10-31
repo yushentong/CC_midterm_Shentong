@@ -54,6 +54,7 @@ function draw() {
   }// end of background
 
   eye01.background((color(30,255,20)),(color(0,0,255)));
+  eye01.display();
 
   //let gravity = createVector(0, 1);
 
