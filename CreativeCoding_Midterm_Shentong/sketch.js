@@ -83,6 +83,8 @@ function draw() {
     }
   }// end of background
 
+  //scene 01
+
   eyes01.display((color(235, 1, 0)),(color(250, 232, 208)), (color(5, 125, 192)), (color(230, 179, 0)));
   eyes02.display((color(4, 207, 217)),(color(252, 220, 0)), (color(184, 3, 1)), (color(251, 219, 220)));
   eyes03.display((color(7, 180, 0)),(color(251, 201, 6)), (color(230, 3, 133)), (color(1, 139, 1)));
@@ -93,7 +95,69 @@ function draw() {
   eyes08.display((color(0, 134, 190)),(color(127, 226, 212)), (color(1, 153, 16)), (color(235, 1, 135)));
   eyes09.display((color(214, 1, 0)),(color(252, 226, 3)), (color(0)), (color(253, 221, 165)));
 
-  //eye05.display((color(195, 170, 0)),(color(184, 2, 0)));
+  //scene 02
+
+  background(252, 239, 230);
+
+  push();
+  scale(2);
+  noFill();
+  stroke(41,48,116);
+
+  strokeWeight(11);
+  bezier(99,0,86,103,151,129,129,204);//face outline
+  bezier(129,202,112,258,128,332,204,450);//face outline
+
+  strokeWeight(13);//hair
+  bezier(0,350,12,373,71,435,109,449);
+  bezier(0,350,88,388,133,365,147,350);
+  strokeWeight(12);
+  bezier(0,322,37,338,107,319,127,293);
+  strokeWeight(10);
+  bezier(0,273,27,278,52,269,74,241);
+  bezier(0,214,28,237,80,243,0,119);
+  strokeWeight(8);
+  bezier(38,14,42,67,96,57,113,105);
+  bezier(0,63,15,110,71,112,72,179);
+  bezier(0,31,25,56,44,82,67,116);
+
+  strokeWeight(18);//eyebrow
+  bezier(173,42,156,43,139,20,106,63);
+  bezier(275,20,301,-20,400,36,424,0);
+
+
+  strokeWeight(8);
+  bezier(213,127,192,100,163,99,122,126);//left eyes
+  bezier(211,142,195,157,141,158,118,129);
+
+  bezier(358,74,343,77,324,94,312,113);//right eyes
+  bezier(358,74,380,70,423,97,448,88);
+  bezier(450,95,363,167,340,104,327,123);
+
+  strokeWeight(6);
+  bezier(270,93,271,82,274,75,282,68);//small line near right eyes
+  bezier(333,85,323,80,313,71,310,57);
+
+  strokeWeight(11);
+  bezier(130,-10,95,18,45,4,0,15);
+
+  strokeWeight(8);
+  bezier(214,84,232,93,250,183,223,227);//nose
+  bezier(223,261,223,269,232,278,246,281);
+  bezier(308,279,327,268,327,257,319,246);
+
+  bezier(271,262,282,255,291,258,296,266);//nosehole
+
+  bezier(220,354,233,331,244,331,260,334);//upperlip
+  bezier(370,346,301,319,282,317,260,334);
+  bezier(362,356,311,335,255,372,221,354);
+
+  bezier(344,354,329,377,243,381,244,361);//downlip
+  bezier(358,372,323,427,224,412,242,365);
+
+  strokeWeight(6);//inbetween mouth and lip
+  bezier(254,318,260,309,260,302,255,294);
+  pop();
 
   //let gravity = createVector(0, 1);
 
