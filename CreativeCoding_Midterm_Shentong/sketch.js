@@ -360,10 +360,27 @@ function draw() {
   //mouth
   noStroke();
   fill(0);
+
+  triangle(262,335,223,352,281,352);
+  triangle(262,335,281,352,352,342);
+  triangle(262,335,281,352,352,342);
+  triangle(245,360,238,382,263,382);
+  triangle(305,377,355,377,345,357);
+
+  beginShape();
+  vertex(322,340);
+  vertex(317,347);
+  vertex(360,357);
+  vertex(360,345);
+  endShape();
+
   beginShape();//mouthbase
   bezier(220,354,233,331,244,331,260,337);//upperlip
   bezier(370,346,301,319,282,317,260,337);
+  bezier(358,339,370,345,365,355,360,358);
+  bezier(287,352,272,360,239,361,223,352);
   bezier(358,372,323,427,224,412,242,375);//downlip
+  bezier(355,378,364,368,358,354,340,353);
   endShape();
 
   noFill();
