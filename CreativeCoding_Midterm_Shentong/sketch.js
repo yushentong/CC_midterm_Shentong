@@ -101,13 +101,40 @@ function draw() {
 
   push();
   scale(2);
+
+  //hairbase
+  noStroke();
+  fill(0);
+  rect(59,286,120,120);
+  rect(70,121,55,220);
+  triangle(0,218,0,231,28,231);
+  triangle(117,247,114,352,151,352);
+
+  beginShape();
+  vertex(89,59);
+  vertex(89,226);
+  vertex(125,226);
+  vertex(132,125);
+  vertex(90,59);
+  endShape();
+
+  beginShape();
+  bezier(0,345,88,388,133,365,147,345);
+  endShape();
+
+  beginShape();
+  vertex(0,15);
+  vertex(0,120);
+  vertex(47,200);
+  vertex(45,15);
+  endShape();
+
+  //face outline
   noFill();
   stroke(41,48,116);
-
   strokeWeight(11);
   bezier(99,0,86,103,151,129,129,204);//face outline
   bezier(129,204,112,258,128,332,204,450);//face outline
-
   strokeWeight(13);//hair
   bezier(0,350,12,373,71,435,109,449);
   bezier(0,350,88,388,133,365,147,350);
@@ -125,9 +152,39 @@ function draw() {
   bezier(173,42,156,43,139,20,106,63);
   bezier(275,20,301,-20,400,36,424,0);
 
+  //eyes
+  noStroke();
+  fill(0);//eyebase
+  beginShape();//left
+  bezier(213,131,192,100,163,99,122,130);//left eyes outline
+  bezier(211,138,195,157,141,158,125,125);
+  bezier(206,122,216,128,215,138,202,143);
+  bezier(448,93,343,77,324,94,312,115);//right eyes
+  bezier(330,98,357,50,380,72,417,92);
+  bezier(450,90,363,167,340,104,327,118);
+  bezier(327,97,298,109,318,119,338,123);
+  rect(355,111,55,12);
+  endShape();
 
+  stroke(41,48,116);//iris
+  strokeWeight(6);
+  fill(137,200,181);
+  ellipse(183,129,40,40);
+  ellipse(395,102,43,43);
+
+  fill(41,48,116);
+  ellipse(183,129,9,9);
+  ellipse(395,102,11,11);
+
+  noStroke();
+  fill(240,227,221);
+  ellipse(179,123,5,9);
+  ellipse(392,95,6,11);
+
+  noFill();
+  stroke(41,48,116);
   strokeWeight(8);
-  bezier(213,127,192,100,163,99,122,126);//left eyes
+  bezier(213,127,192,100,163,99,122,126);//left eyes outline
   bezier(211,142,195,157,141,158,125,129);
 
   bezier(358,74,343,77,324,94,312,113);//right eyes
@@ -300,11 +357,23 @@ function draw() {
 
   bezier(271,262,282,255,291,258,296,266);//nosehole
 
-  bezier(220,354,233,331,244,331,260,334);//upperlip
+  //mouth
+  noStroke();
+  fill(0);
+  beginShape();//mouthbase
+  bezier(220,354,233,331,244,331,260,337);//upperlip
+  bezier(370,346,301,319,282,317,260,337);
+  bezier(358,372,323,427,224,412,242,375);//downlip
+  endShape();
+
+  noFill();
+  stroke(41,48,116);
+  strokeWeight(6);
+  bezier(220,354,233,331,244,331,260,334);//upperlip outline
   bezier(370,346,301,319,282,317,260,334);
   bezier(362,356,311,335,255,372,221,354);
 
-  bezier(344,354,329,377,243,381,244,361);//downlip
+  bezier(344,354,329,377,243,381,244,361);//downlip ouline
   bezier(358,372,323,427,224,412,242,365);
 
   strokeWeight(6);//inbetween mouth and lip
