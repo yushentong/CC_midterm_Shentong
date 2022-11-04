@@ -106,7 +106,7 @@ function draw() {
 
   strokeWeight(11);
   bezier(99,0,86,103,151,129,129,204);//face outline
-  bezier(129,202,112,258,128,332,204,450);//face outline
+  bezier(129,204,112,258,128,332,204,450);//face outline
 
   strokeWeight(13);//hair
   bezier(0,350,12,373,71,435,109,449);
@@ -128,12 +128,164 @@ function draw() {
 
   strokeWeight(8);
   bezier(213,127,192,100,163,99,122,126);//left eyes
-  bezier(211,142,195,157,141,158,118,129);
+  bezier(211,142,195,157,141,158,125,129);
 
   bezier(358,74,343,77,324,94,312,113);//right eyes
   bezier(358,74,380,70,423,97,448,88);
   bezier(450,95,363,167,340,104,327,123);
 
+  //eyelash
+  noStroke();
+  fill(41,48,116);
+
+  //left
+  beginShape();
+  curveVertex(120,133);
+  curveVertex(120,133);
+  curveVertex(98,115);
+  curveVertex(130,125); 
+  curveVertex(130,125);  
+  endShape();
+
+  beginShape();
+  curveVertex(123,120);
+  curveVertex(123,120);
+  curveVertex(110,105);
+  curveVertex(139,115); 
+  curveVertex(139,115); 
+  endShape();
+
+  beginShape();
+  curveVertex(140,118);
+  curveVertex(140,118);
+  curveVertex(128,105);
+  curveVertex(147,110); 
+  curveVertex(147,110); 
+  endShape();
+
+  beginShape();
+  curveVertex(150,109);
+  curveVertex(150,109);
+  curveVertex(143,98);
+  curveVertex(162,104); 
+  curveVertex(162,104); 
+  endShape();
+
+  beginShape();
+  curveVertex(166,103);
+  curveVertex(166,103);
+  curveVertex(160,95);
+  curveVertex(186,107); 
+  curveVertex(186,107); 
+  endShape();
+
+  beginShape();
+  curveVertex(122,135);
+  curveVertex(122,135);
+  curveVertex(110,145);
+  curveVertex(130,143); 
+  curveVertex(130,143); 
+  endShape();
+
+  beginShape();
+  curveVertex(133,143);
+  curveVertex(133,143);
+  curveVertex(130,155);
+  curveVertex(150,150); 
+  curveVertex(150,150); 
+  endShape();
+
+  beginShape();
+  curveVertex(151,152);
+  curveVertex(151,152);
+  curveVertex(148,159);
+  curveVertex(173,150); 
+  curveVertex(173,150); 
+  endShape();
+
+  beginShape();
+  curveVertex(171,153);
+  curveVertex(171,153);
+  curveVertex(169,160);
+  curveVertex(188,148); 
+  curveVertex(188,148); 
+  endShape();
+
+  //right
+  beginShape();
+  curveVertex(357,76);
+  curveVertex(357,76);
+  curveVertex(380,62);
+  curveVertex(375,75);
+  curveVertex(375,75);
+  endShape();
+
+  beginShape();
+  curveVertex(377,75);
+  curveVertex(377,75);
+  curveVertex(397,65);
+  curveVertex(388,80);
+  curveVertex(388,80);
+  endShape();
+
+  beginShape();
+  curveVertex(390,80);
+  curveVertex(390,80);
+  curveVertex(412,70);
+  curveVertex(405,80);
+  curveVertex(405,80);
+  endShape();
+
+  beginShape();
+  curveVertex(408,85);
+  curveVertex(408,85);
+  curveVertex(442,75);
+  curveVertex(426,90);
+  curveVertex(426,90);
+  endShape();
+
+  beginShape();
+  curveVertex(426,90);
+  curveVertex(426,90);
+  curveVertex(460,78);
+  curveVertex(445,90);
+  curveVertex(445,90);
+  endShape();
+
+  beginShape();
+  curveVertex(430,105);
+  curveVertex(430,105);
+  curveVertex(460,110);
+  curveVertex(450,97);
+  curveVertex(450,97);
+  endShape();
+
+  beginShape();
+  curveVertex(425,115);
+  curveVertex(425,115);
+  curveVertex(446,119);
+  curveVertex(438,108);
+  curveVertex(438,108);
+  endShape();
+
+  beginShape();
+  curveVertex(425,115);
+  curveVertex(425,115);
+  curveVertex(446,119);
+  curveVertex(433,108);
+  curveVertex(433,108);
+  endShape();
+
+  beginShape();
+  curveVertex(413,124);
+  curveVertex(413,124);
+  curveVertex(431,125);
+  curveVertex(419,115);
+  curveVertex(419,115);
+  endShape();
+
+  noFill();
+  stroke(41,48,116);
   strokeWeight(6);
   bezier(270,93,271,82,274,75,282,68);//small line near right eyes
   bezier(333,85,323,80,313,71,310,57);
