@@ -19,7 +19,7 @@ class Popcorn{
 			if ((mouseX - this.position.x)<50 || (mouseY - this.position.y)<50){
 				let mouse = createVector(mouseX, mouseY);
 				this.acceleration = p5.Vector.sub(mouse, this.position).div(-1);
-				this.acceleration.setMag(1);
+				this.acceleration.setMag(0.1);
 			} else {
 				this.acceleration = createVector(0, 0);
 			}
@@ -27,7 +27,7 @@ class Popcorn{
 
 		this.velocity.add(this.acceleration);
 		this.position.add(this.velocity);
-		this.velocity.limit(10);
+		this.velocity.limit(5);
 
 		if (this.velocity<5){
 			this.velocity = 5;

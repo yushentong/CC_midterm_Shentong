@@ -69,19 +69,6 @@ function setup() {
 function draw() {
   //background red dots
   background(255);
-  for (let i = 0; i < 900; i += 10){
-    for (let j =0 ; j < 900; j += 10){
-      if ((j%20)==0){
-        fill(203, 51, 31);
-        noStroke();
-        ellipse(i,j,8,8);
-      } else {
-        fill(203, 51, 31);
-        noStroke();
-        ellipse(i+5,j,8,8);
-      }
-    }
-  }// end of background
 
   //scene 01
 
@@ -99,12 +86,52 @@ function draw() {
 
   background(252, 239, 230);
 
+  let range = map(mouseX, 0, width, 0, 500)
+
+  for (let i = 0; i <= 400+range; i += 30){
+    for (let j =0 ; j <= 900; j += 30){
+      if ((j%60)==0){
+        if(i<=150){
+          fill(203, 51, 31);
+          noStroke();
+          ellipse(i,j,i/10+10,i/10+10);
+        }
+        else if(i<=350){
+          fill(203, 51, 31);
+          noStroke();
+          ellipse(i,j,20,20);
+        }else{
+          fill(203, 51, 31);
+          noStroke();
+          ellipse(i,j,20-((i-400)/10),20-((i-400)/10));
+        } 
+      }
+        else{
+          if(i<=150){
+            fill(203, 51, 31);
+            noStroke();
+            ellipse(i+15,j,i/10+10,i/10+10);
+        }
+          else if(i<=350){
+            fill(203, 51, 31);
+            noStroke();
+            ellipse(i+15,j,20,20);
+        }
+        else{
+          fill(203, 51, 31);
+          noStroke();
+          ellipse(i+15,j,20-((i-400)/10),20-((i-400)/10));
+        } 
+      }
+    }
+  }// end of background
+
   push();
   scale(2);
 
   //hairbase
   noStroke();
-  fill(0);
+  fill(252, 239, 230);
   rect(59,286,120,120);
   rect(70,121,55,220);
   triangle(0,218,0,231,28,231);
@@ -154,7 +181,7 @@ function draw() {
 
   //eyes
   noStroke();
-  fill(0);//eyebase
+  fill(252, 239, 230);//eyebase
   beginShape();//left
   bezier(213,131,192,100,163,99,122,130);//left eyes outline
   bezier(211,138,195,157,141,158,125,125);
@@ -359,7 +386,7 @@ function draw() {
 
   //mouth
   noStroke();
-  fill(0);
+  fill(166,30,34);
 
   triangle(262,335,223,352,281,352);
   triangle(262,335,281,352,352,342);
@@ -396,6 +423,8 @@ function draw() {
   strokeWeight(6);//inbetween mouth and lip
   bezier(254,318,260,309,260,302,255,294);
   pop();
+
+  //end of scene 02
 
   //let gravity = createVector(0, 1);
 
