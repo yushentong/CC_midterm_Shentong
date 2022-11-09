@@ -1,6 +1,6 @@
 /*
 body Popcorn = (254, 248, 222);
-outline Popcorn = (196, 160, 134);
+outline Popcorn = (0);
 core = (193, 135, 71);
 
 */
@@ -91,7 +91,7 @@ class Popcorn{
 
 		/*if (transition == true){
 			noStroke();
-			fill(196, 160, 134);
+			fill(0);
 			ellipse(this.position.x,this.position.y, 40, 40);
 
 			fill(254, 248, 222);
@@ -112,7 +112,7 @@ class Popcorn{
 
 				noStroke();
 
-				fill(196, 160, 134);
+				fill(0);
 				ellipse(this.position.x-10,this.position.y-5, 40, 40);
 				ellipse(this.position.x+5,this.position.y+10, 40, 40);
 				ellipse(this.position.x-15,this.position.y+15, 40, 40);
@@ -149,7 +149,7 @@ class Popcorn{
 				}
 
 				noStroke();
-				fill(196, 160, 134);
+				fill(0);
 				ellipse(this.position.x-30,this.position.y-5, 40, 40);
 				ellipse(this.position.x-15,this.position.y+10, 40, 40);
 				ellipse(this.position.x-45,this.position.y+25, 40, 40);
@@ -189,7 +189,7 @@ class Popcorn{
 				}
 
 				noStroke();
-				fill(196, 160, 134);
+				fill(0);
 				ellipse(this.position.x-10,this.position.y-10, 40, 40);
 				ellipse(this.position.x+5,this.position.y+20, 40, 40);
 				ellipse(this.position.x-15,this.position.y-25, 40, 40);
@@ -226,7 +226,7 @@ class Popcorn{
 				}
 
 				noStroke();
-				fill(196, 160, 134);
+				fill(0);
 				ellipse(this.position.x-10,this.position.y+10, 40, 40);
 				ellipse(this.position.x+10,this.position.y, 40, 40);
 				ellipse(this.position.x-5,this.position.y-20, 40, 40);
