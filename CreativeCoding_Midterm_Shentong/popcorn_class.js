@@ -79,97 +79,169 @@ class Popcorn{
 
 	display(style){
 
-		if(style == 1){
-			noStroke();
+		let transition = false;
 
-			fill(196, 160, 134);
-			ellipse(this.position.x-10,this.position.y-5, 40, 40);
-			ellipse(this.position.x+5,this.position.y+10, 40, 40);
-			ellipse(this.position.x-15,this.position.y+15, 40, 40);
-			ellipse(this.position.x+10,this.position.y-10, 40, 40);
-			ellipse(this.position.x+20,this.position.y+20, 40, 40);
+		let m = millis();
 
-			fill(254, 248, 222);
-			ellipse(this.position.x-10,this.position.y-5, 30, 30);
-			ellipse(this.position.x+5,this.position.y+10, 30, 30);
-			ellipse(this.position.x-15,this.position.y+15, 30, 30);
-			ellipse(this.position.x+10,this.position.y-10, 30, 30);
-			ellipse(this.position.x+20,this.position.y+20, 30, 30);
+		if ((0<=(m%20000)&&(m%20000)<=499)||(10000<=(m%20000)&&(m%20000)<=10499)){
+		    transition = true;
+		 } else{
+		 	transition = false;
+		 }
 
-			fill(193, 135, 71);
-			ellipse(this.position.x-5,this.position.y+5, 10, 10);
-			ellipse(this.position.x+5,this.position.y+5, 10, 10);
-			ellipse(this.position.x-3,this.position.y, 10, 10);
-			ellipse(this.position.x+3,this.position.y, 10, 10);
-			ellipse(this.position.x,this.position.y+5, 10, 10);
-		}
-
-		if(style == 2){
+		/*if (transition == true){
 			noStroke();
 			fill(196, 160, 134);
-			ellipse(this.position.x-30,this.position.y-5, 40, 40);
-			ellipse(this.position.x-15,this.position.y+10, 40, 40);
-			ellipse(this.position.x-45,this.position.y+25, 40, 40);
-			ellipse(this.position.x+10,this.position.y+20, 40, 40);
-			ellipse(this.position.x-20,this.position.y+40, 40, 40);
+			ellipse(this.position.x,this.position.y, 40, 40);
 
 			fill(254, 248, 222);
-			ellipse(this.position.x-30,this.position.y-5, 30, 30);
-			ellipse(this.position.x-15,this.position.y+10, 30, 30);
-			ellipse(this.position.x-45,this.position.y+25, 30, 30);
-			ellipse(this.position.x+10,this.position.y+20, 30, 30);
-			ellipse(this.position.x-20,this.position.y+40, 30, 30);
-			ellipse(this.position.x-10,this.position.y+22, 30, 30);
-			ellipse(this.position.x-20,this.position.y+20, 30, 30);
+			ellipse(this.position.x,this.position.y, 30, 30);
+		}*/
 
-			fill(193, 135, 71);
-			ellipse(this.position.x-22,this.position.y+25, 10, 10);
-			ellipse(this.position.x-15,this.position.y+20, 10, 10);
-			ellipse(this.position.x-25,this.position.y+20, 10, 10);
-			ellipse(this.position.x-20,this.position.y+20, 10, 10);
-			ellipse(this.position.x-17,this.position.y+25, 10, 10);
-		}
+			if(style == 1){
+				push();
 
-		if(style == 3){
-			noStroke();
-			fill(196, 160, 134);
-			ellipse(this.position.x-10,this.position.y-10, 40, 40);
-			ellipse(this.position.x+5,this.position.y+20, 40, 40);
-			ellipse(this.position.x-15,this.position.y-25, 40, 40);
-			ellipse(this.position.x+20,this.position.y-10, 40, 40);
-			ellipse(this.position.x+20,this.position.y+25, 40, 40);
+				if (transition == true){
+					scale(0.5);
+					translate(this.position.x, this.position.y);
+				}
 
-			fill(254, 248, 222);
-			ellipse(this.position.x-10,this.position.y-10, 30, 30);
-			ellipse(this.position.x+5,this.position.y+20, 30, 30);
-			ellipse(this.position.x-15,this.position.y-25, 30, 30);
-			ellipse(this.position.x+20,this.position.y-10, 30, 30);
-			ellipse(this.position.x+20,this.position.y+25, 30, 30);
-			ellipse(this.position.x+10,this.position.y+5, 30, 30);
+				if (transition == false){
+					scale(1);
+				}
 
-			strokeWeight(5);
-			stroke(193, 135, 71);
-			arc(this.position.x+20,this.position.y-10, 20, 20, 0.5*PI, 0.75*PI);
-			arc(this.position.x+5,this.position.y+20, 25, 25, 1.5*PI, 1.8*PI);
+				noStroke();
 
-		}
+				fill(196, 160, 134);
+				ellipse(this.position.x-10,this.position.y-5, 40, 40);
+				ellipse(this.position.x+5,this.position.y+10, 40, 40);
+				ellipse(this.position.x-15,this.position.y+15, 40, 40);
+				ellipse(this.position.x+10,this.position.y-10, 40, 40);
+				ellipse(this.position.x+20,this.position.y+20, 40, 40);
 
-		if(style == 4){
-			noStroke();
-			fill(196, 160, 134);
-			ellipse(this.position.x-10,this.position.y+10, 40, 40);
-			ellipse(this.position.x+10,this.position.y, 40, 40);
-			ellipse(this.position.x-5,this.position.y-20, 40, 40);
-			ellipse(this.position.x+10,this.position.y-10, 40, 40);
-			ellipse(this.position.x,this.position.y+15, 40, 40);
+				fill(254, 248, 222);
+				ellipse(this.position.x-10,this.position.y-5, 30, 30);
+				ellipse(this.position.x+5,this.position.y+10, 30, 30);
+				ellipse(this.position.x-15,this.position.y+15, 30, 30);
+				ellipse(this.position.x+10,this.position.y-10, 30, 30);
+				ellipse(this.position.x+20,this.position.y+20, 30, 30);
 
-			fill(254, 248, 222);
-			ellipse(this.position.x-10,this.position.y+10, 30, 30);
-			ellipse(this.position.x+10,this.position.y, 30, 30);
-			ellipse(this.position.x-5,this.position.y-20, 30, 30);
-			ellipse(this.position.x+10,this.position.y-10, 30, 30);
-			ellipse(this.position.x,this.position.y+15, 30, 30);
-		}
+				fill(193, 135, 71);
+				ellipse(this.position.x-5,this.position.y+5, 10, 10);
+				ellipse(this.position.x+5,this.position.y+5, 10, 10);
+				ellipse(this.position.x-3,this.position.y, 10, 10);
+				ellipse(this.position.x+3,this.position.y, 10, 10);
+				ellipse(this.position.x,this.position.y+5, 10, 10);
+
+				pop();
+			}
+
+			if(style == 2){
+				push();
+
+				if (transition == true){
+					scale(0.5);
+					translate(this.position.x, this.position.y);
+				}
+
+				if (transition == false){
+					scale(1);
+				}
+
+				noStroke();
+				fill(196, 160, 134);
+				ellipse(this.position.x-30,this.position.y-5, 40, 40);
+				ellipse(this.position.x-15,this.position.y+10, 40, 40);
+				ellipse(this.position.x-45,this.position.y+25, 40, 40);
+				ellipse(this.position.x+10,this.position.y+20, 40, 40);
+				ellipse(this.position.x-20,this.position.y+40, 40, 40);
+
+				fill(254, 248, 222);
+				ellipse(this.position.x-30,this.position.y-5, 30, 30);
+				ellipse(this.position.x-15,this.position.y+10, 30, 30);
+				ellipse(this.position.x-45,this.position.y+25, 30, 30);
+				ellipse(this.position.x+10,this.position.y+20, 30, 30);
+				ellipse(this.position.x-20,this.position.y+40, 30, 30);
+				ellipse(this.position.x-10,this.position.y+22, 30, 30);
+				ellipse(this.position.x-20,this.position.y+20, 30, 30);
+
+				fill(193, 135, 71);
+				ellipse(this.position.x-22,this.position.y+25, 10, 10);
+				ellipse(this.position.x-15,this.position.y+20, 10, 10);
+				ellipse(this.position.x-25,this.position.y+20, 10, 10);
+				ellipse(this.position.x-20,this.position.y+20, 10, 10);
+				ellipse(this.position.x-17,this.position.y+25, 10, 10);
+
+				pop();
+			}
+
+			if(style == 3){
+
+				push();
+
+				if (transition == true){
+					scale(0.5);
+					translate(this.position.x, this.position.y);
+				}
+
+				if (transition == false){
+					scale(1);
+				}
+
+				noStroke();
+				fill(196, 160, 134);
+				ellipse(this.position.x-10,this.position.y-10, 40, 40);
+				ellipse(this.position.x+5,this.position.y+20, 40, 40);
+				ellipse(this.position.x-15,this.position.y-25, 40, 40);
+				ellipse(this.position.x+20,this.position.y-10, 40, 40);
+				ellipse(this.position.x+20,this.position.y+25, 40, 40);
+
+				fill(254, 248, 222);
+				ellipse(this.position.x-10,this.position.y-10, 30, 30);
+				ellipse(this.position.x+5,this.position.y+20, 30, 30);
+				ellipse(this.position.x-15,this.position.y-25, 30, 30);
+				ellipse(this.position.x+20,this.position.y-10, 30, 30);
+				ellipse(this.position.x+20,this.position.y+25, 30, 30);
+				ellipse(this.position.x+10,this.position.y+5, 30, 30);
+
+				strokeWeight(5);
+				stroke(193, 135, 71);
+				arc(this.position.x+20,this.position.y-10, 20, 20, 0.5*PI, 0.75*PI);
+				arc(this.position.x+5,this.position.y+20, 25, 25, 1.5*PI, 1.8*PI);
+
+				pop();
+
+			}
+
+			if(style == 4){
+				push();
+
+				if (transition == true){
+					scale(0.5);
+					translate(this.position.x, this.position.y);
+				}
+
+				if (transition == false){
+					scale(1);
+				}
+
+				noStroke();
+				fill(196, 160, 134);
+				ellipse(this.position.x-10,this.position.y+10, 40, 40);
+				ellipse(this.position.x+10,this.position.y, 40, 40);
+				ellipse(this.position.x-5,this.position.y-20, 40, 40);
+				ellipse(this.position.x+10,this.position.y-10, 40, 40);
+				ellipse(this.position.x,this.position.y+15, 40, 40);
+
+				fill(254, 248, 222);
+				ellipse(this.position.x-10,this.position.y+10, 30, 30);
+				ellipse(this.position.x+10,this.position.y, 30, 30);
+				ellipse(this.position.x-5,this.position.y-20, 30, 30);
+				ellipse(this.position.x+10,this.position.y-10, 30, 30);
+				ellipse(this.position.x,this.position.y+15, 30, 30);
+
+				pop();
+			}
 
 	}
 }

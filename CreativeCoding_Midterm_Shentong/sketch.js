@@ -67,7 +67,7 @@ function setup() {
 }
 
 function draw() {
-  background(255);
+  background(0);
 
   let m=millis();
 
@@ -125,7 +125,7 @@ function draw() {
           else if(i<=350){
             fill(203, 51, 31);
             noStroke();
-            ellipse(i,j,20,20);
+            ellipse(i,j,25,25);
           }else{
             fill(203, 51, 31);
             noStroke();
@@ -141,7 +141,7 @@ function draw() {
             else if(i<=350){
               fill(203, 51, 31);
               noStroke();
-              ellipse(i+15,j,20,20);
+              ellipse(i+15,j,25,25);
           }
           else{
             fill(203, 51, 31);
