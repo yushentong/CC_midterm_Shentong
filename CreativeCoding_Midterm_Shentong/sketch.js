@@ -1,3 +1,4 @@
+//inspired by Andy Warhol, Marilyn Monroe, 1967 & Roy Lichtenstein, Nude with Blue Hair, 1994
 /*
 red = (203, 51, 31);
 blue = (13, 50, 132);
